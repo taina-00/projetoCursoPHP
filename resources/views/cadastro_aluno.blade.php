@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<form action="/criar_usuario" method="post">
+    <h1>Cadastrar Alunos</h1>
+<form action="/criar_aluno" method="post">
         @csrf
         <label for="name">Nome</label>
         <input type="text" name="name">
@@ -23,7 +25,7 @@
         <label for="rg">RG</label>
         <input type="text" name="rg">
 
-        <input type="submit" value="Salvar">
+        <input  class="botao" type="submit" value="Salvar">
     </form>
 </body>
 </html>

@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 class AlunoController extends Controller
 {
     public function criar(Request $request) {
-        $aluno = new User;
+        $aluno = new Aluno;
         $aluno->name = $request->name;
         $aluno->cpf = $request->cpf;
         $aluno->email = $request->email;
         $aluno->telefone = $request->telefone;
+        $aluno->rg = $request->rg;
 
         $aluno->save();
         return redirect('/listar_alunos');

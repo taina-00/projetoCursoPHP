@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("cpf");
+            $table->string("email");
+            $table->string("telefone");
+            $table->string("rg");
             $table->timestamps();
         });
     }

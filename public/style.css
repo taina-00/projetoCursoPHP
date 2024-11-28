@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Corpo com fundo escuro e gradiente */
+  body {
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #333333);
+    flex-direction: column;
+  }
+  
+  /* Contêiner do formulário */
+  .form-container {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: 5px solid #00bcd4; /* Azul ciano */
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  /* Efeito de borda externa */
+  .form-container:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px dashed #00bcd4;
+    border-radius: 12px;
+    z-index: -1;
+  }
+  
+  /* Título no topo, destacado e centralizado */
+  h1 {
+    font-size: 3rem;
+    color: #00bcd4;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; /* Centraliza o título */
+    margin-top: 20px; /* Coloca o título no topo */
+  }
+  
+  /* Estilo do grupo de inputs */
+  .form-group {
+    margin-bottom: 25px;
+    text-align: left;
+    position: relative;
+  }
+  
+  /* Estilo das labels */
+  label {
+    font-size: 1.1rem;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilo dos inputs */
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #333333;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efeito de foco nos inputs */
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #00bcd4; /* Azul ciano */
+    background-color: #444;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.7);
+  }
+  
+  /* Estilo do botão de submit maior e azul */
+  .submit-btn {
+    background-color: #00bcd4; /* Azul ciano */
+    color: #ffffff;
+    border: 3px solid #0097a7; /* Borda azul mais escura */
+    padding: 20px 50px;
+    border-radius: 50px; /* Bordas arredondadas */
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out; /* Transição suave */
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 0 6px 15px rgba(0, 188, 212, 0.4);
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+  }
+  
+  /* Efeito de hover no botão de submit */
+  .submit-btn:hover {
+    background-color: #0097a7; /* Azul mais escuro */
+    color: #ffffff; /* Mantém a cor do texto */
+    transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    border-color: #00bcd4; /* Traz a borda de volta para o azul ciano */
+  }
+  
+  /* Efeito de foco (quando o botão é focado) */
+  .submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.6); /* Foco com sombra azul */
+  }
+  
+  /* Estilo para inputs de texto com placeholder */
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder {
+    color: #b0b0b0;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Responsividade para telas pequenas */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 25px;
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    form .botao {
+        background-color: #3498db; /* Azul vibrante */
+        color: #ffffff;
+        border: none;
+        padding: 20px 40px;
+        border-radius: 30px; /* Bordas mais arredondadas */
+        font-size: 1.4rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        margin-top: 30px;
+        box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase; /* Letras maiúsculas */
+        letter-spacing: 2px; 
+    }
+  }
+  

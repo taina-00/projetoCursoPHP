@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
 @if(count($cursos) == 0)
@@ -17,14 +18,17 @@
     </tr>
     @foreach ($cursos as $curso)
         <tr>
-          <td>{{$cursos->nome}}</td>
-          <td>{{$cursos->descricao}}</td>
-          <td>{{$cursos->duracao}}</td>
+          <td>{{$curso->nome}}</td>
+          <td>{{$curso->descricao}}</td>
+          <td>{{$curso->duracao}}</td>
           <td>
-            <form method="POST" action="/deletar_curso/{{$cursos->nome}}">
+          <form method="POST" action="/deletar_curso/{{$curso->id}}">
               @csrf
               {{ method_field("DELETE") }}
               <input type="submit" value="delete curso">
+            </form>
+          
+          
             </form>
           </td>
         </tr>

@@ -27,4 +27,10 @@ class CursoController extends Controller
 
         return view("cursos", ["cursos"=>$cursos]);
     }
+
+    public function deletar($id) {
+        $curso = new Curso;
+        $curso->find($id)->delete();
+        return redirect('/listar_cursos');
+    }
 }

@@ -21,11 +21,13 @@ Route::post('/criar_curso', [CursoController::class, 'criar']);
 
 Route::get('/listar_cursos', [CursoController::class, 'listar']);
 
+Route::delete("/deletar_curso/{id}", [CursoController::class, 'deletar']);
+
 // App
 Route::get('/', [AppController::class, 'inicial']);
 
 
-Route::get('/cadastro_cursos_alunos', [Cursos_AlunosController::class, 'formCadastrarCursos']);
+Route::get('/listar_cursos_alunos', [Cursos_AlunosController::class, 'formCadastrarCursos']);
 
 Route::post('/cadastrar_curso', [Cursos_AlunosController::class, 'cadastrar']);
 
